@@ -1,0 +1,120 @@
+/* ---------- Variables ---------- */
+:root {
+  --color-titulo: #222222;
+  --color-blanco: #ffffff;
+  --fuente-titulo: "Lato", "Helvetica Neue", Arial, sans-serif;
+  --fuente-texto: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  --margen-lateral: 80px;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 90px var(--margen-lateral) 200px;
+
+  /* Coloca tu foto en la carpeta img/ con este nombre.
+     El degradado sirve de respaldo si la imagen no carga. */
+  background-color: #6f93d4;
+  background-image:
+    url("https://i.ibb.co/SD7FFqDC/casaportada.jpg"),
+    linear-gradient(180deg, #7fa3e0 0%, #cfdcf2 45%, #4fb3cf 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero__contenido {
+  max-width: 880px;
+}
+
+.hero__titulo {
+  margin: 0;
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 5.6vw, 4.6rem);
+  line-height: 1.08;
+  color: var(--color-titulo);
+}
+
+.hero__texto {
+  max-width: 700px;
+  margin: 14px 0 0;
+  font-family: var(--fuente-texto);
+  font-weight: 500;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.5;
+  color: var(--color-blanco);
+}
+
+/* ---------- Categorías ---------- */
+.categorias {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-top: 70px;
+}
+
+.categorias__enlace {
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3.4vw, 2.9rem);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-blanco);
+  letter-spacing: 0;
+  transition: opacity 0.2s ease;
+}
+
+.categorias__enlace:hover {
+  opacity: 0.8;
+}
+
+.categorias__enlace:focus-visible {
+  outline: 3px solid var(--color-blanco);
+  outline-offset: 6px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  :root {
+    --margen-lateral: 40px;
+  }
+
+  .hero {
+    padding-bottom: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --margen-lateral: 24px;
+  }
+
+  .hero {
+    padding-top: 60px;
+  }
+
+  .categorias {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

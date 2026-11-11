@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Encabezado</title>
+
+  <!-- Fuente Barlow (similar a la del diseño original) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos del encabezado -->
+  <link rel="stylesheet" href="CSS/header.css">
+  
+
+<!-- Biblioteca de iconos Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+<body>
+
+  <!-- ENCABEZADO PRINCIPAL -->
+  <header class="header">
+       <!-- Espacio reservado para el logo.
+         Cuando tengas la imagen, descomenta la etiqueta <img> y ajusta la ruta. -->
+    <div class="header__logo">
+    <a href="home.html">
+      <img src="https://i.ibb.co/m59snyMq/LOGOGOMMEZ2.png" width="300" height="150"> 
+    </a>
+    </div>
+
+    <!-- MENÚ DE NAVEGACIÓN (enlaces de texto) -->
+    <nav class="header__nav">
+      <a href="#" id="abrir-servicios" class="header__link header__link--servicios">Servicios</a>
+      <a href="#" id="abrir-buscado">Lo Más buscado</a>
+      <a href="#nosotros"  class="header__link header__link--nosotros" id="abrir-nosotros">Nosotros</a>
+      <a href="#" id="abrir-contacto" class="header__link header__link--contacto">Contacto</a>
+    <a href="carrito.html" class="carrito-icono" aria-label="Ver carrito">
+    🛒 <span id="contador-carrito">0</span>
+    </a>  
+  </nav>
+
+    <!-- ICONOS DE CONTACTO / REDES -->
+<div class="header__icons">
+
+  <!-- Teléfono -->
+  <a href="tel:+520000000000"
+     class="icon icon--telefono"
+     aria-label="Teléfono">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+
+  <!-- Sitio web -->
+  <a href="#"
+     class="icon icon--web"
+     aria-label="Sitio web">
+    <i class="fa-solid fa-globe"></i>
+  </a>
+
+  <!-- Instagram -->
+  <a href="#"
+     class="icon icon--camera"
+     aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+</div>
+<!-- Ventana Lo Más buscado -->
+<div id="ventana-buscado" class="modal-buscado" hidden>
+  <div class="modal-buscado-contenido">
+    <button id="cerrar-buscado"
+            class="cerrar-buscado"
+            aria-label="Cerrar ventana">×</button>
+
+    <h2>Lo Más buscado</h2>
+    <p>Encuentra tu propiedad ideal en GOMMEZ</p>
+
+    <div class="buscado-opciones">
+      <a href="casas.html" class="buscado-tarjeta">
+        <h3>Casas</h3>
+        <p>Conoce nuestras casas disponibles.</p>
+        <span>Ver casas →</span>
+      </a>
+
+      <a href="terrenos.html" class="buscado-tarjeta">
+        <h3>Terrenos</h3>
+        <p>Encuentra el terreno ideal para invertir.</p>
+        <span>Ver terrenos →</span>
+      </a>
+
+      <a href="departamentos.html" class="buscado-tarjeta">
+        <h3>Departamentos</h3>
+        <p>Descubre departamentos disponibles.</p>
+        <span>Ver departamentos →</span>
+      </a>
+    </div>
+  </div>
+</div>
+  </header>
+  <!-- VENTANA EMERGENTE SERVICIOS -->
+<div id="ventana-servicios" class="modal-servicios" hidden>
+  <div class="modal-servicios__contenido">
+    <button id="cerrar-servicios" class="modal-servicios__cerrar" aria-label="Cerrar">×</button>
+
+    <h2>Nuestros Servicios</h2>
+
+    <p><strong>Compra de inmuebles</strong><br>
+    Te ayudamos a encontrar la propiedad ideal.</p>
+
+    <p><strong>Venta de propiedades</strong><br>
+    Promocionamos tu inmueble para encontrar compradores.</p>
+
+    <p><strong>Renta de inmuebles</strong><br>
+    Encuentra casas, departamentos y terrenos disponibles.</p>
+
+    <p><strong>Asesoría inmobiliaria</strong><br>
+    Te acompañamos durante todo el proceso.</p>
+  </div>
+</div>
+<!-- VENTANA EMERGENTE CONTACTO -->
+<div id="ventana-contacto" class="modal-contacto" hidden>
+  <div class="modal-contacto__contenido">
+
+    <button id="cerrar-contacto"
+            class="modal-contacto__cerrar"
+            aria-label="Cerrar">×</button>
+
+    <h2>Contáctanos</h2>
+    <h3>Inmobiliaria GOMMEZ</h3>
+
+    <p>Estamos para ayudarte a encontrar
+    tu propiedad ideal.</p>
+
+    <p>📞 Teléfono: 9512219472</p>
+
+    <p>💬 WhatsApp: Próximamente</p>
+
+    <p>✉️ Correo: jacksgmzrunning@gmail.com</p>
+
+    <p>📍 Abasolo 120, Centro,
+    Oaxaca, Oax.</p>
+
+    <p>🕒 Horario: Por confirmar</p>
+
+  </div>
+</div>
+<!-- Ventana emergente Nosotros -->
+<div id="ventana-nosotros" class="modal-nosotros" hidden>
+    <div class="modal-contenido" role="dialog"
+         aria-modal="true"
+         aria-labelledby="titulo-nosotros">
+
+        <button id="cerrar-nosotros"
+                class="cerrar-modal"
+                aria-label="Cerrar ventana">
+            &times;
+        </button>
+
+        <h2 id="titulo-nosotros">Sobre GOMMEZ</h2>
+
+        <p>
+            En GOMMEZ nos dedicamos a ofrecer
+            soluciones inmobiliarias para ayudarte
+            a encontrar la propiedad ideal.
+        </p>
+
+        <p>
+            Nuestro compromiso es brindarte
+            confianza, atención personalizada
+            y acompañamiento en la compra,
+            venta o renta de inmuebles.
+        </p>
+    </div>
+</div>
+<script>
+(function () {
+    const abrir = document.getElementById("abrir-nosotros");
+    const ventana = document.getElementById("ventana-nosotros");
+    const cerrar = document.getElementById("cerrar-nosotros");
+
+    if (!abrir || !ventana || !cerrar) return;
+
+    abrir.addEventListener("click", function(event) {
+        event.preventDefault();
+        ventana.hidden = false;
+        cerrar.focus();
+    });
+
+    cerrar.addEventListener("click", function() {
+        ventana.hidden = true;
+        abrir.focus();
+    });
+
+    ventana.addEventListener("click", function(event) {
+        if (event.target === ventana) {
+            ventana.hidden = true;
+        }
+    });
+
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape" && !ventana.hidden) {
+            ventana.hidden = true;
+            abrir.focus();
+        }
+    });
+})();
+</script>
+</body>
+</html>

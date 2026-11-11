@@ -1,0 +1,520 @@
+/* ==========================================================
+   header.css - Encabezado
+   ========================================================== */
+
+/* ---------- Variables de diseño ---------- */
+:root {
+  --color-fondo: #cdf4fa;          /* Celeste claro del encabezado */
+  --color-texto: #3d5a6c;          /* Azul grisáceo de los enlaces */
+  --color-icono-telefono: #7bbfbd; /* Azul del teléfono */
+  --color-icono-azul: #62a0d3;     /* Azul del globo y la cámara */
+  --color-glifo: #dff1fb;          /* Color claro del dibujo dentro del icono */
+  --fuente: 'Barlow', Arial, sans-serif;
+}
+
+/* ---------- Reset básico ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente);
+}
+
+/* ---------- Contenedor del encabezado ---------- */
+.header {
+  display: flex;               /* Logo, menú e iconos en una misma fila */
+  align-items: center;     /* Alineación superior; cada elemento se ajusta con margin-top */
+  width: 100%;
+  height: 155px;               /* Altura total del encabezado */
+  padding-left: 52px;          /* Margen izquierdo antes del logo */
+  background-color: var(--color-fondo);
+}
+
+/* ---------- Espacio reservado para el logo ---------- */
+.header__logo {
+  flex: 0 0 100px;             /* Ancho fijo: no se encoge ni crece */
+  height: 102px;
+  margin-top: 15px;            /* Posición vertical del logo */
+  border-radius: 50%;          /* Forma circular */
+  overflow: hidden;
+  /* background-color: #fff;      Descomenta para visualizar el espacio mientras trabajas */
+}
+
+/* Ajusta la imagen del logo al espacio cuando la coloques */
+.header__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ---------- Menú de navegación ---------- */
+.header__nav {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 63px;           /* Separación entre el logo y el primer enlace */
+}
+
+/* ---------- Estilo de los enlaces de texto ---------- */
+.header__link {
+  margin-top: 68px;            /* Posición vertical del texto */
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  color: var(--color-texto);
+  text-decoration: none;
+  white-space: nowrap;         /* Evita que "Lo Más buscado" se parta en dos líneas */
+  transition: opacity 0.2s ease;
+}
+
+.header__link:hover {
+  opacity: 0.7;
+}
+
+/* Separación individual entre enlaces (el diseño original no es uniforme) */
+
+/* ---------- Bloque de iconos ---------- */
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-left: 14px;          /* Separación entre "Contacto" y el primer icono */
+  margin-top: 60px;            /* Posición vertical de los iconos */
+}
+
+/* ---------- Estilo base de cada icono (círculo) ---------- */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--color-glifo);   /* Color del dibujo interior */
+  transition: transform 0.2s ease;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Colores y separaciones individuales */
+.icon--telefono {
+  background-color: #6F9F91;
+  margin-left: 0;
+}
+
+.icon--web {
+  background-color: #6F9F91;
+  margin-left: 0;
+}
+
+.icon--camera,
+.icon--camara {
+  background-color: #6F9F91;
+  margin-left: 0;
+}
+/* Iconos blancos */
+.header__icons .icon i {
+  color: #FFFFFF;
+  font-size: 24px;
+  display: block;
+}
+
+/* Centrar los iconos */
+.header__icons .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* CARRITO DE COMPRAS */
+
+.carrito-icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #333;
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+.carrito-icono:hover {
+    color: #009688;
+}
+
+#contador-carrito {
+    background-color: #009688;
+    color: white;
+    font-size: 12px;
+    padding: 3px 7px;
+    border-radius: 50%;
+}
+
+/* ALINEAR LOS ELEMENTOS DEL MENÚ */
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+/* ALINEAR EL MENÚ Y EL CARRITO */
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+    flex-wrap: nowrap;
+}
+
+/* CARRITO */
+
+.carrito-icono {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 24px;
+    margin-left: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+#contador-carrito {
+    background-color: #009688;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 3px 7px;
+}
+
+/* CORRECCIÓN DEL ENCABEZADO GOMMEZ */
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 120px;
+    height: auto;
+    padding: 15px 30px;
+    gap: 25px;
+}
+
+/* LOGOTIPO */
+
+.header__logo {
+    flex: 0 0 100px;
+    margin-top: 0;
+}
+
+/* MENÚ PRINCIPAL */
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    min-width: 0;
+    gap: 25px;
+    margin-left: 0;
+    flex-wrap: wrap;
+}
+
+/* ENLACES */
+
+.header__link {
+    margin: 0;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+/* ICONOS */
+
+.header__icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+}
+
+/* CARRITO */
+
+.carrito-icono {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    font-size: 24px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* CONTADOR */
+
+#contador-carrito {
+    background-color: #009688;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 3px 7px;
+}
+
+/* PANTALLAS PEQUEÑAS */
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+
+    .header__nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .header__link {
+        font-size: 16px;
+    }
+}
+/* Ventana emergente Nosotros */
+.modal-nosotros {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+/* Ocultar ventana */
+.modal-nosotros[hidden] {
+    display: none;
+}
+
+/* Caja de contenido */
+.modal-contenido {
+    position: relative;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.modal-contenido h2 {
+    color: #357d68;
+    margin-bottom: 20px;
+}
+
+.modal-contenido p {
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Botón cerrar */
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #555;
+}
+/* VENTANA DE SERVICIOS */
+.modal-servicios {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.modal-servicios[hidden] {
+    display: none;
+}
+
+.modal-servicios__contenido {
+    position: relative;
+    background: #f4f7f1;
+    padding: 35px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 480px;
+    max-height: 85vh;
+    overflow-y: auto;
+    text-align: center;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.modal-servicios__contenido h2 {
+    color: #557b65;
+    margin-bottom: 20px;
+}
+
+.modal-servicios__contenido p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.modal-servicios__cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}
+/* VENTANA DE CONTACTO */
+
+.modal-contacto {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.modal-contacto[hidden] {
+    display: none;
+}
+
+.modal-contacto__contenido {
+    position: relative;
+    background: #f4f7f1;
+    padding: 35px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 480px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    text-align: center;
+    color: #333;
+}
+
+.modal-contacto__contenido h2 {
+    color: #557b65;
+    margin-bottom: 15px;
+}
+
+.modal-contacto__contenido h3 {
+    color: #557b65;
+}
+
+.modal-contacto__contenido p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.modal-contacto__cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}
+/* VENTANA LO MÁS BUSCADO */
+
+.modal-buscado[hidden] {
+  display: none !important;
+}
+
+.modal-buscado {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.modal-buscado-contenido {
+  position: relative;
+  background: #f8f8f8;
+  padding: 35px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.modal-buscado-contenido h2 {
+  color: #406b58;
+  margin-bottom: 15px;
+}
+
+.cerrar-buscado {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.buscado-opciones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.buscado-tarjeta {
+  background: #e1ebe5;
+  border-radius: 12px;
+  padding: 20px 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+.buscado-tarjeta:hover {
+  background: #c9dfd2;
+}
+
+.buscado-tarjeta h3 {
+  color: #406b58;
+}
+
+.buscado-tarjeta span {
+  color: #267354;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .buscado-opciones {
+    grid-template-columns: 1fr;
+  }
+}

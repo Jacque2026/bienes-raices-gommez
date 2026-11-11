@@ -1,0 +1,360 @@
+/* ==========================================================
+   footer.css - Pie de página
+   ========================================================== */
+
+/* ---------- Variables de diseño ---------- */
+:root {
+  --color-fondo: #fcfcfc;      /* Fondo del footer */
+  --color-texto: #3d5a6c;      /* Azul grisáceo del texto */
+  --color-icono: #7bbfbd;      /* Verde azulado de los iconos */
+  --color-glifo: #e6f6f4;      /* Color claro del dibujo dentro de los círculos */
+  --fuente: 'Barlow', Arial, sans-serif;
+}
+
+/* ---------- Reset básico ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente);
+}
+
+/* ---------- Contenedor del footer ---------- */
+.footer {
+  display: flex;               /* Logo, textos e iconos en una misma fila */
+  align-items: flex-start;     /* Alineación superior; cada bloque se ajusta con margin-top */
+  width: 100%;
+  height: 135px;               /* Altura total del footer */
+  padding-left: 17px;          /* Margen izquierdo antes del logo */
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+/* ---------- Espacio reservado para el logo ---------- */
+.footer__logo {
+  flex: 0 0 96px;              /* Ancho fijo: no se encoge ni crece */
+  height: 98px;
+  margin-top: 20px;            /* Posición vertical del logo */
+  border-radius: 50%;          /* Forma circular */
+  overflow: hidden;
+  /* background-color: #eee;      Descomenta para visualizar el espacio mientras trabajas */
+}
+
+/* Ajusta la imagen del logo al espacio cuando la coloques */
+.footer__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ---------- Dirección ---------- */
+.footer__address {
+  margin-left: 309px;          /* Separación entre el logo y la dirección */
+  margin-top: 25px;
+  font-style: normal;          /* Quita la cursiva por defecto de <address> */
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;          /* Las tres líneas van centradas entre sí */
+  white-space: nowrap;
+}
+
+/* ---------- Texto "Siguenos en" ---------- */
+.footer__follow {
+  margin-left: 305px;          /* Separación respecto a la dirección */
+  margin-top: 48px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  white-space: nowrap;
+}
+
+/* ---------- Bloque de iconos ---------- */
+.footer__icons {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;                   /* Separación entre iconos */
+  margin-left: 167px;          /* Separación respecto a "Siguenos en" */
+  margin-top: 31px;
+}
+
+/* ---------- Estilo base de cada icono ---------- */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--color-icono);
+  transition: transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Instagram: solo contorno, el dibujo ocupa todo el espacio */
+.icon--instagram svg {
+  width: 44px;
+  height: 44px;
+}
+
+/* Facebook y cámara: círculo relleno con el dibujo claro dentro */
+.icon--facebook,
+.icon--camara {
+  background-color: var(--color-icono);
+  color: var(--color-glifo);
+}
+
+.icon--facebook svg,
+.icon--camara svg {
+  width: 26px;
+  height: 26px;
+}
+/* FOOTER GOMMEZ */
+
+.footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    padding: 35px 50px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+}
+
+/* Columnas del footer */
+.footer > div {
+  flex: 1;
+  text-align: center;
+}
+
+/* Logo */
+.footer img {
+  max-width: 130px;
+  height: auto;
+}
+
+/* Textos */
+.footer h3,
+.footer p {
+  margin: 5px 0;
+  text-align: center;
+}
+
+/* Redes sociales */
+.footer__redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 25px;
+    gap: 20px;
+  }
+}
+/* AJUSTE FINAL DEL FOOTER GOMMEZ */
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  padding: 35px 40px;
+  box-sizing: border-box;
+}
+
+/* Logotipo */
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dirección */
+.footer__address {
+  text-align: center;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+/* Redes sociales */
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer__follow {
+  margin: 0;
+  text-align: center;
+}
+
+/* Tres iconos con separación uniforme */
+.footer__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 25px 20px;
+  }
+}
+/* CORRECCION FINAL FOOTER GOMMEZ */
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 25px;
+  min-height: 180px;
+  padding: 30px 40px;
+  box-sizing: border-box;
+}
+
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__logo img {
+  width: 130px;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+.footer__address {
+  text-align: center;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer__follow {
+  margin: 0;
+}
+
+.footer__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 25px 20px;
+  }
+}
+/* LOGOTIPO */
+.footer__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__logo img {
+    display: block;
+    width: 130px;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+}
+
+/* DIRECCIÓN */
+.footer__address {
+    text-align: center;
+    font-style: normal;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* REDES SOCIALES */
+.footer__follow {
+    text-align: center;
+    margin: 0 0 15px;
+}
+
+.footer__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* EVITAR ESPACIOS EXTRA */
+.footer__icons .icon {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+@media (max-width: 768px) {
+    .footer {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 25px 20px;
+        gap: 20px;
+    }
+}
+/* Ajuste final del logotipo */
+.footer__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.footer__logo img {
+    width: 130px;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    display: block;
+}
+.footer {
+    align-items: center;
+}
+
+.footer__logo,
+.footer__address {
+    align-self: center;
+}
+
+.footer__icons {
+    justify-content: center;
+    gap: 20px;
+}

@@ -1,0 +1,268 @@
+/* ---------- Variables ---------- */
+:root {
+  --color-fondo: #ffffff;
+  --color-tarjeta: #85bfca;
+  --color-texto: #ffffff;
+  --fuente: "Lato", "Helvetica Neue", Arial, sans-serif;
+  --margen-lateral: 5px;
+  --separacion: 57px;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-fondo);
+  font-family: var(--fuente);
+}
+
+/* ---------- Sección ---------- */
+.casas {
+  padding: 10px var(--margen-lateral);
+}
+
+.listado {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--separacion);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ---------- Tarjeta ---------- */
+.tarjeta {
+  background: var(--color-tarjeta);
+}
+
+.tarjeta__enlace {
+  display: block;
+  height: 100%;
+  color: var(--color-texto);
+  text-decoration: none;
+}
+
+.tarjeta__imagen {
+  display: block;
+  width: 100%;
+  aspect-ratio: 408 / 305;
+  object-fit: cover;
+  background: #e8e4df;
+}
+
+.tarjeta__info {
+  min-height: 233px;
+  padding: 44px 20px 30px;
+  text-align: center;
+}
+
+.tarjeta__texto {
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(1.1rem, 1.7vw, 1.4rem);
+  line-height: 1.3;
+  color: var(--color-texto);
+}
+
+.tarjeta__enlace:focus-visible {
+  outline: 3px solid #1d5f6b;
+  outline-offset: 4px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  :root {
+    --margen-lateral: 20px;
+    --separacion: 24px;
+  }
+
+  .listado {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .listado {
+    grid-template-columns: 1fr;
+  }
+}
+/* BOTÓN AGREGAR AL CARRITO */
+
+.btn-carrito {
+    display: block;
+    width: 90%;
+    margin: 15px auto;
+    padding: 12px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-carrito:hover {
+    background-color: #00796b;
+}
+
+.btn-carrito:disabled {
+    background-color: #777;
+    cursor: default;
+}
+/* Espacio entre las casas y el footer */
+.casas {
+    padding-bottom: 60px;
+}
+
+/* Botones del carrito */
+.btn-carrito {
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #009688;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* ==================================
+   GOMMEZ - DISEÑO DE CASAS
+   ================================== */
+
+/* CONTENEDOR PRINCIPAL */
+
+.casas {
+    width: 100%;
+    padding: 40px 25px 60px;
+    box-sizing: border-box;
+}
+
+/* DISTRIBUCIÓN DE TARJETAS */
+
+.casas .listado {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    align-items: stretch;
+}
+
+/* TARJETAS */
+
+.casas .tarjeta {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: auto;
+    background: #a8c2bc;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease;
+}
+
+.casas .tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+/* ENLACE DE LA TARJETA */
+
+.casas .tarjeta__enlace {
+    display: block;
+    height: auto;
+    flex: 1;
+    color: #263b36;
+    text-decoration: none;
+}
+
+/* IMÁGENES */
+
+.casas .tarjeta__imagen {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* INFORMACIÓN */
+
+.casas .tarjeta__info {
+    min-height: 120px;
+    padding: 20px 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* TEXTO */
+
+.casas .tarjeta__texto {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #263b36;
+}
+
+/* BOTONES DEL CARRITO */
+
+.casas .btn-carrito {
+    display: block;
+    width: calc(100% - 24px);
+    margin: 12px;
+    padding: 14px 10px;
+    background: #28745c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.casas .btn-carrito:hover {
+    background: #195b46;
+}
+
+/* SEPARACIÓN DEL FOOTER */
+
+.casas + #footer {
+    position: relative;
+    margin-top: 40px;
+    clear: both;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .casas .listado {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+    .casas .listado {
+        grid-template-columns: 1fr;
+    }
+
+    .casas {
+        padding: 25px 15px 40px;
+    }
+}
+
+
+
+
+
